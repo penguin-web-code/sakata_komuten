@@ -1,0 +1,644 @@
+@use "breakpoints";
+
+$font-ja:"Noto Serif JP", system-ui;
+$font-en:"Lora", serif;
+$main-color:#31452d;
+$accent-color:#b69b04;
+$sub-color:#eeead0;
+$font-color:#fff;
+$font-color-dark:#333;
+
+$layout-width-inner:1040px;
+
+$header-height:80px;
+$header-height-sp:64px;
+
+body{
+    font-family: $font-ja;
+}
+.inner{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+    @include breakpoints.mq(pc){
+        width: $layout-width-inner;
+        max-width: 100%;
+
+    }
+}
+section{
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+.section__title{
+    font-size: 32px;
+    text-align: center;
+}
+.section__en{
+    font-size: 16px;
+    color: $main-color;
+    margin-top: 8px;
+    position: relative;
+    padding-bottom: 32px;
+    display: block;
+    &::after{
+        position: absolute;
+        width: 64px;
+        height: 1px;
+        content: "";
+        background: $accent-color;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+}
+.is-sp{
+    @include breakpoints.mq(pc){
+        display: none;
+
+    }
+}
+.is-pc{
+    @include breakpoints.mq(sp){
+        display: none;
+
+    }
+}
+
+///header///
+.header{
+    position: fixed;
+    width: 100%;
+    height: $header-height;
+    z-index: 20;
+    background: rgba( #fff, 0.8);
+
+}
+.header__logo{
+   width: 140px;
+}
+.header__contact{
+    width: 168px;
+    margin-left: auto;
+    a{
+        display: block;
+        font-size: 16px;
+        color: #fff;
+        background: $main-color;
+        height: $header-height;
+        text-align: center;
+        padding-top: 24px;
+        line-height: 1;
+    }
+    span{
+        font-family: $font-en;
+        font-size: 12px;
+        color: $accent-color;
+        display: block;
+        line-height: 1;
+        margin-top: 7px;
+    }
+    @include breakpoints.mq(sp){
+        display: none;
+
+    }
+}
+.header__container{
+    display: flex;
+    position: relative;
+}
+.header__menu-button{
+       border: none;
+        position: absolute;
+        top: 22px;
+        right: 20px;
+        width: 24px;
+        height: 20px;
+        overflow: hidden;
+        color: transparent;
+        background: url(../img/menu-icon@2x.png) center center no-repeat;
+        background-size: 100% auto;
+        @include breakpoints.mq(pc){
+            display: none;
+
+        }
+        &.is-checked{
+            background:url(../img/bg_menu-close.png) center center no-repeat;
+            background-size: 100% auto;
+
+        }
+
+}
+.header__nav{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    margin-left: 32px;
+}
+
+.header__nav-list{
+    display: flex;
+
+}
+.header__nav-item{
+    position: relative;
+    white-space: nowrap;
+    &::before{
+        content: "";
+        height: 36px;
+        width: 1px;
+        background: $font-color-dark;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    a{
+        display: block;
+        padding: 0 30px;
+        font-size: 16px;
+        line-height: 1;
+        text-align: center;
+    }
+}
+.button__text{
+    line-height: 1;
+    font-family: $font-en;
+    color: $accent-color;
+    margin-top: 8px;
+    display: block;
+    font-size: 12px;
+}
+.header__contents{
+}
+.header__nav{
+    @include breakpoints.mq(sp){
+        display: none;
+
+    }
+}
+
+//header-sp//
+.header__nav-sp{
+    margin-top: 80px;
+}
+
+//fv//
+.fv{
+    width: 100%;
+    height: 900px;
+    background: transparent url(../img/top-image@2x.jpg) no-repeat center center /cover;
+}
+.fv__container{
+    height: inherit;
+    position: relative;
+}
+.fv__text{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    img{
+        width: 960px;
+
+    }
+
+}
+//concept//
+.concept{
+    @include breakpoints.mq(pc){
+        margin-bottom: 600px;
+    }
+}
+.concept__container{
+    position: relative;
+}
+.concept__message{
+    padding: 60px 40px;
+    color: $font-color;
+    background: $main-color;
+    @include breakpoints.mq(pc){
+        position: absolute;
+        left: 0;
+        top: 184px;
+        width: 43%;
+    }
+}
+.concept__image{
+    img{
+        height: 360px;
+
+    }
+    @include breakpoints.mq(pc){
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 77%;
+        img{
+            height: 480px;
+        }
+
+}
+}
+.concept__message-main{
+    font-size: 20px;
+    @include breakpoints.mq(pc){
+        font-size: 24px;
+
+}
+}
+.concept__message-sub{
+    font-size: 16px;
+    line-height: 2.5;
+    margin-top: 24px;
+    margin-bottom: 32px;
+}
+.concept-btn{
+    text-align: right;
+    padding-right: 10px;
+    span{
+        margin-left: 8px;
+    }
+
+
+    }
+
+//works//
+.works{
+    position: relative;
+}
+.works__bg{
+    position: absolute;
+    width: 75%;
+    background: $sub-color;
+    right: 0;
+    content: "";
+    top: 30%;
+    height: 500px;
+
+
+}
+.works__wrapper{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px 40px;
+    margin-bottom: 62px;
+    @include breakpoints.mq(pc){
+        grid-template-columns: repeat(3,1fr);
+        gap: 40px 152px;
+
+}
+}
+.works__item-title{
+    font-size: 20px;
+    margin-left: 18px;
+    margin-top: 17px;
+    margin-bottom: 16px;
+}
+.works__item-link{
+    font-size: 16px;
+    margin-left: 18px;
+    position: relative;
+    &::before{
+        position: absolute;
+        content: "";
+        bottom: 3px;
+        left: -8px;
+        width: 1px;
+        height: 111px;
+        background: $font-color-dark;
+
+    }
+    span{
+        margin-left: 8px;
+    }
+}
+.button{
+   width: 150px;
+   height: 45px;
+   font-size: 16px;
+   display: block;
+   padding-top: 10px;
+}
+
+.button__normal{
+    color: $main-color;
+    border: 1px solid $main-color;
+    text-align: center;
+    margin: 0 auto;
+}
+
+//news//
+.news__item{
+    padding: 24px 0;
+    display: block;
+    @include breakpoints.mq(pc){
+        display: flex;
+    }
+
+}
+.news__item:not(:first-child) {
+    @include breakpoints.mq(sp){
+    border-top:1px solid #e5e5e5;
+    }
+
+}
+.news__date{
+    font-size: 14px;
+    span{
+        margin-left: 25px;
+        color: $main-color;
+        @include breakpoints.mq(pc){
+            padding-left: 50px;
+            padding-right: 50px;
+            position: relative;
+            &::before{
+                position: absolute;
+                content:"";
+                width: 1px;
+                height: 48px;
+                background: #e5e5e5;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+
+            }
+            &::after{
+                position: absolute;
+                content:"";
+                width: 1px;
+                height: 48px;
+                background: #e5e5e5;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+
+            }
+
+        }
+    }
+}
+.news__item-news{
+    color: $accent-color !important;
+}
+.news__title{
+    font-size: 16px;
+    margin-top: 5px;
+    @include breakpoints.mq(pc){
+        padding-left: 42px;
+    }
+
+}
+.news__items{
+    @include breakpoints.mq(pc){
+        margin-bottom: 42px;
+    }
+
+}
+//contact//
+.contact{
+    padding: 40px 0;
+    background: $sub-color;
+    margin-bottom: 0;
+}
+.contact__item{
+    padding: 30px 12px;
+    display: flex;
+    @include breakpoints.mq(pc){
+        display: block;
+        padding: 0 55px;
+        position: relative;
+
+    }
+}
+.contact__item:nth-child(2) {
+    @include breakpoints.mq(pc){
+    position: relative;
+    }
+  }
+
+.contact__item:nth-child(2)::before{
+    @include breakpoints.mq(pc){
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 1px; /* 線の幅 */
+  height: 190px;
+  background-color: $font-color-dark /* 線の色 */
+}
+}
+.contact__item:nth-child(2)::after {
+    @include breakpoints.mq(pc){
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 1px; /* 線の幅 */
+  height: 190px;
+  background-color: $font-color-dark /* 線の色 */
+}
+}
+.contact__items{
+    @include breakpoints.mq(pc){
+        display: flex;
+        max-width: 846px;
+        margin: 0 auto;
+    }
+}
+.contact__item-icon{
+    @include breakpoints.mq(sp){
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+    }
+    @include breakpoints.mq(pc){
+        text-align: center;
+        margin-bottom: 18px;
+    }
+}
+.contact__item-text{
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 23px;
+    @include breakpoints.mq(sp){
+        display: flex;
+        align-items: center;
+    }
+}
+.contact-btn{
+    width: 150px;
+    height: 46px;
+    font-size: 16px;
+    color: $font-color;
+    background:$main-color;
+    text-align: center;
+    padding-top: 10px;
+    margin: 23px auto 0;
+    @include breakpoints.mq(sp){
+        margin-left: auto;
+
+    }
+}
+.contact__item-btn--accent{
+    background: $accent-color;
+}
+.contact__hours{
+    text-align: right;
+    color: $main-color;
+    font-size: 12px;
+    display: block;
+}
+.contact__item-btn--tel{
+    position: relative;
+    &::after{
+        position: absolute;
+        content: "営業時間9:00〜18:00 (水曜定休)";
+        color: $main-color;
+        font-size: 14px;
+        bottom: -28px;
+        width: 100%;
+        white-space: nowrap;
+        left: -27px;
+    }
+}
+.pc__tel {
+   font-size: 24px;
+   font-family: $font-en;
+   text-align: center;
+   color: $main-color;
+}
+.pc__hours{
+    font-size: 12px;
+    text-align: center;
+    text-align: center;
+    color: $main-color;
+}
+
+//footer//
+.footer{
+    background: $main-color;
+    color: $font-color;
+    text-align: center;
+    font-size: 16px;
+    padding-top: 40px;
+    padding-bottom: 15px;
+}
+.footer__up{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.footer__nav-item{
+    padding: 24px 0;
+    position: relative;
+    @include breakpoints.mq(sp){
+        &:not(:first-child){
+            &::before{
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: $font-color;
+        }
+        }
+
+    }
+    @include breakpoints.mq(pc){
+        padding: 0 32px;
+        &:not(:first-child){
+            &::before{
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            height: 100%;
+            width: 1px;
+            background: $font-color;
+        }
+        }
+
+    }
+
+
+}
+.footer__nav-container{
+    @include breakpoints.mq(pc){
+       display: flex;
+       margin: 56px auto 122px;
+       max-width: 700px;
+
+    }
+}
+
+//copy//
+.footer__copy{
+    background:$font-color-dark ;
+    color: $font-color;
+    @include breakpoints.mq(sp){
+        padding-top: 33px;
+        padding-bottom: 16px;
+
+     }
+     @include breakpoints.mq(pc){
+        padding: 20px 0;
+    }
+
+}
+.copy__container-left--1{
+    position: relative;
+        padding-right: 42px;
+        &::after{
+            position: absolute;
+            content: "";
+            width: 1px;
+            height: 100%;
+            background: $font-color;
+            top: 0;
+            right: 0;
+        }
+
+
+}
+.copy__container-left{
+    font-size: 16px;
+    display: flex;
+    gap: 33px;
+    @include breakpoints.mq(sp){
+        margin-bottom: 40px;
+    }
+}
+.copy__container-right{
+    @include breakpoints.mq(sp){
+        text-align: center;
+        font-size: 12px;
+        font-family: $font-en;
+    }
+
+}
+.footer__copy-container {
+    @include breakpoints.mq(pc){
+        display: flex;
+    }
+}
+.copy__container-right{
+    @include breakpoints.mq(pc){
+        margin-left: auto;
+    }
+}
+
+
+
+
+
+
+
+
+

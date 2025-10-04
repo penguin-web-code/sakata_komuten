@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/reset.css">
+<link rel="stylesheet" href="./sass/style.css">
+</head>
+<body>
+    <header class="header">
+    <div class="header__container inner">
+        <div class="header__logo"><a href=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="140" height="72" viewBox="0 0 140 36">
+            <image id="logo-header.svg" width="140" height="36" xlink:href="data:img/png;base64,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"/>
+          </svg>
+          </a></div>
+          <button type="button" id="js-button-drawer" class="header__menu-button">Menu</button>
+
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item">
+                        <a href="#concept" class="header__nav-link button">
+                            コンセプト<span class="button__text">Concept</span>
+                        </a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#works" class="header__nav-link button">
+                            施工実績<span class="button__text">Works</span>
+                        </a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#news" class="header__nav-link button">
+                            お知らせ<span class="button__text">News</span>
+                        </a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#company" class="header__nav-link button">
+                            会社概要<span class="button__text">Comapny</span>
+                        </a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#faq" class="header__nav-link button">
+                            よくある質問<span class="button__text">Faq</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__contact">
+                <a href="#contact" class="header__nav-link button">お問い合わせ<span>Contact</span></a>
+            </div>
+    </div>
+</header>
+<nav id="js-drawer" class="header__nav-sp">
+                <ul class="header__nav-list-sp">
+                    <li class="header__nav-item">
+                        <a href="#concept" class="header__nav-link button">
+                            コンセプト<span class="button__text">Concept</span>
+                        </a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#works" class="header__nav-link button">
+                            施工実績<span class="button__text">Works</span>
+                        </a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#news" class="header__nav-link button">
+                            お知らせ<span class="button__text">News</span>
+                        </a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#company" class="header__nav-link button">
+                            会社概要<span class="button__text">Comapny</span>
+                        </a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#faq" class="header__nav-link button">
+                            よくある質問<span class="button__text">Faq</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+<div class="fv">
+    <div class="fv__container inner">
+    <div class="fv__text"><img src="./img/グループ 1@2x.png" alt=""></div>
+</div>
+</div>
+<section class="concept">
+    <div class="section__title">コンセプト<span class="section__en">Concept</span></div>
+    <div class="concept__container">
+        <div class="concept__image"><img src="./img/image-concept@2x.jpg" alt=""></div>
+        <div class="concept__message">
+            <div class="concept__message-main">自然と調和しながら暮らす家</div>
+            <div class="concept__message-sub">窓から射し込む太陽の光で目が覚め、美しい自然の風景を見ながら、朝のひと時を過ごす。季節折々の風景の移り変わりを身近に感じられる</div>
+            <div class="concept-btn"><a href="">詳しく見る<span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                <image id="arrow-w-icon.svg" width="16" height="16" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB2klEQVRYhc2XsWoiURSGvzMaq1jIVikDi01YCVZp8wZTCIKWQdBei7yBpFZCemEbA/sGVnayBNsIsTJVimGDRYQ5Ke7IToaAc504k78bZs79/jmXe885Qkyp6g/ABS6BCnAKHAevX4EnYA5MgD8i8hJ37V3giqr+VtU3ja+3IKaSBFxU1VtV9S3AUfnBGkVb+JmqPiYAR/Woqmdx4Req6n0hfCtPVS/i/Pkh4GETHzIh4T0H/gI/rfbLXgugKiL/AJzQi5sU4ASMm+2DgDlqwAOhjBxYCpyLyHybgesU4QSsawBRc8M9A0cpGgDYACcO5npNG07AdPOYuz22RqMRm82GZrNJoVBIauLSwRSW2Fqv1wyHQ2q1GpPJJKmBioOpatZarVb0ej3a7TaLxWJfA6cO/0vqXprNZjQaDfr9Pp7n2YYfO7u/2S3f9xmPxwwGA+vYPKaZSJSFcrlMt9ulWq3ahr7mMZ3Mr33ApVKJTqeD67o4zl7JfMpj2igrA7lcjnq9TqvVoli06zUimqOqVzb1dDqd6nK5/KryfJX9VRx0r/cpwwHuReTle5RjEZkDdynBAe4CZvYt2QdpBk3pZyaya8sjmchmMAmZyG40ixg56HAa+9zrgcbzd+19NPawOxmBAAAAAElFTkSuQmCC"/>
+              </svg>
+              </span></a></div>
+        </div>
+    </div>
+</section>
+<section class="works">
+    <div class="works__bg"></div>
+    <div class="works container inner">
+        <div class="section__title">施工実績<span class="section__en">Works</span></div>
+        <div class="works__wrapper">
+            <div class="works__item">
+                <div class="works__item-img">
+                    <img src="./img/image-works-1@2x.jpg" alt="">
+                </div>
+                <div class="works__item-title">若木の家</div>
+                <a class="works__item-link">詳しく見る<span class="works__item-btn"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                    <image id="arrow-b-icon.svg" width="16" height="16" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACL0lEQVRYhc2XsWtaQRzHPz50kbQOneoWcCuV4DmUbE5ZhYpL3TvoHPQvCKi7irOCoODaKVvJclLELiIEp0xBiJkMaoa7ZzVVvPfU1342Oe++33fv3e/3PR+GCCE+AEkgAUSBc+BMDz8D90AfuAW6UspHk3V9BsJRoAB8BQKGfl+ADnAjpey7MiCEeAcUge8mRnewBGrAtZRyamxACPEJ6AIRl8JvGQFJKeXvvQaEEF+AH8D7I4nbPAFXUsq7nQb0k/88gfi6icv1nVgZ0O+8x/G2fRcjIGZ/E9baQNEDcbRG0f7hg9VR+4X7r90pS+BCStm3d6DgoThaqwDg0xXuAfMicyxegI8Wqrx6LY7WTPpRtd2YTCZDIBCg0Wgwm80ONZGwUI3FmGAwSDabpd1uk0g48r6NqIXqao4Jh8OUSiWq1SqRiOvTe27xp6W6Ih6P02w2yefzhEIhp9PPrP3/2Y9lWaRSKXK5nOO5flSYOGgXhsMh5XKZXq/ndOqzH5VkPrsRnkwmVCoVut0ui8XCzRL3flSMcmRgPp/TarWo1+tMp1tzhil9PyrDfTOdMRgMSKfTjMfjQ4Rtbv99KdbpteOxOEBHSvloH8MbVIv0iqXWVIFER+eahwZqdlxfL0TXqLh0akZaiw0DOqMlUcHxVDyh4vnq7G6UYp1Wr05kwo7lG3eDv3qBzu2XHPd1jFBx/O7twNZmpF3GgCqHnY6lXiO27VYE//PldIuRk1zPXwFSssUF2TmRaQAAAABJRU5ErkJggg=="/>
+                  </svg>
+
+                  </span></a>
+            </div>
+            <div class="works__item">
+                <div class="works__item-img"><img src="./img/image-works-2@2x.jpg" alt=""></div>
+                <div class="works__item-title">長谷堂の家</div>
+                <a class="works__item-link">詳しく見る<span class="works__item-btn"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                    <image id="arrow-b-icon.svg" width="16" height="16" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACL0lEQVRYhc2XsWtaQRzHPz50kbQOneoWcCuV4DmUbE5ZhYpL3TvoHPQvCKi7irOCoODaKVvJclLELiIEp0xBiJkMaoa7ZzVVvPfU1342Oe++33fv3e/3PR+GCCE+AEkgAUSBc+BMDz8D90AfuAW6UspHk3V9BsJRoAB8BQKGfl+ADnAjpey7MiCEeAcUge8mRnewBGrAtZRyamxACPEJ6AIRl8JvGQFJKeXvvQaEEF+AH8D7I4nbPAFXUsq7nQb0k/88gfi6icv1nVgZ0O+8x/G2fRcjIGZ/E9baQNEDcbRG0f7hg9VR+4X7r90pS+BCStm3d6DgoThaqwDg0xXuAfMicyxegI8Wqrx6LY7WTPpRtd2YTCZDIBCg0Wgwm80ONZGwUI3FmGAwSDabpd1uk0g48r6NqIXqao4Jh8OUSiWq1SqRiOvTe27xp6W6Ih6P02w2yefzhEIhp9PPrP3/2Y9lWaRSKXK5nOO5flSYOGgXhsMh5XKZXq/ndOqzH5VkPrsRnkwmVCoVut0ui8XCzRL3flSMcmRgPp/TarWo1+tMp1tzhil9PyrDfTOdMRgMSKfTjMfjQ4Rtbv99KdbpteOxOEBHSvloH8MbVIv0iqXWVIFER+eahwZqdlxfL0TXqLh0akZaiw0DOqMlUcHxVDyh4vnq7G6UYp1Wr05kwo7lG3eDv3qBzu2XHPd1jFBx/O7twNZmpF3GgCqHnY6lXiO27VYE//PldIuRk1zPXwFSssUF2TmRaQAAAABJRU5ErkJggg=="/>
+                  </svg>
+
+                  </span></a>
+            </div>
+            <div class="works__item">
+                <div class="works__item-img"><img src="./img/image-works-3@2x.jpg" alt=""></div>
+                <div class="works__item-title">荒谷の家</div>
+                <a class="works__item-link">詳しく見る<span class="works__item-btn"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                    <image id="arrow-b-icon.svg" width="16" height="16" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACL0lEQVRYhc2XsWtaQRzHPz50kbQOneoWcCuV4DmUbE5ZhYpL3TvoHPQvCKi7irOCoODaKVvJclLELiIEp0xBiJkMaoa7ZzVVvPfU1342Oe++33fv3e/3PR+GCCE+AEkgAUSBc+BMDz8D90AfuAW6UspHk3V9BsJRoAB8BQKGfl+ADnAjpey7MiCEeAcUge8mRnewBGrAtZRyamxACPEJ6AIRl8JvGQFJKeXvvQaEEF+AH8D7I4nbPAFXUsq7nQb0k/88gfi6icv1nVgZ0O+8x/G2fRcjIGZ/E9baQNEDcbRG0f7hg9VR+4X7r90pS+BCStm3d6DgoThaqwDg0xXuAfMicyxegI8Wqrx6LY7WTPpRtd2YTCZDIBCg0Wgwm80ONZGwUI3FmGAwSDabpd1uk0g48r6NqIXqao4Jh8OUSiWq1SqRiOvTe27xp6W6Ih6P02w2yefzhEIhp9PPrP3/2Y9lWaRSKXK5nOO5flSYOGgXhsMh5XKZXq/ndOqzH5VkPrsRnkwmVCoVut0ui8XCzRL3flSMcmRgPp/TarWo1+tMp1tzhil9PyrDfTOdMRgMSKfTjMfjQ4Rtbv99KdbpteOxOEBHSvloH8MbVIv0iqXWVIFER+eahwZqdlxfL0TXqLh0akZaiw0DOqMlUcHxVDyh4vnq7G6UYp1Wr05kwo7lG3eDv3qBzu2XHPd1jFBx/O7twNZmpF3GgCqHnY6lXiO27VYE//PldIuRk1zPXwFSssUF2TmRaQAAAABJRU5ErkJggg=="/>
+                  </svg>
+
+                  </span></a>
+            </div>
+            <div class="works__item">
+                <div class="works__item-img"><img src="./img/image-works-4@2x.jpg" alt=""></div>
+                <div class="works__item-title">寺津の家</div>
+                <a class="works__item-link">詳しく見る<span class="works__item-btn"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                    <image id="arrow-b-icon.svg" width="16" height="16" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACL0lEQVRYhc2XsWtaQRzHPz50kbQOneoWcCuV4DmUbE5ZhYpL3TvoHPQvCKi7irOCoODaKVvJclLELiIEp0xBiJkMaoa7ZzVVvPfU1342Oe++33fv3e/3PR+GCCE+AEkgAUSBc+BMDz8D90AfuAW6UspHk3V9BsJRoAB8BQKGfl+ADnAjpey7MiCEeAcUge8mRnewBGrAtZRyamxACPEJ6AIRl8JvGQFJKeXvvQaEEF+AH8D7I4nbPAFXUsq7nQb0k/88gfi6icv1nVgZ0O+8x/G2fRcjIGZ/E9baQNEDcbRG0f7hg9VR+4X7r90pS+BCStm3d6DgoThaqwDg0xXuAfMicyxegI8Wqrx6LY7WTPpRtd2YTCZDIBCg0Wgwm80ONZGwUI3FmGAwSDabpd1uk0g48r6NqIXqao4Jh8OUSiWq1SqRiOvTe27xp6W6Ih6P02w2yefzhEIhp9PPrP3/2Y9lWaRSKXK5nOO5flSYOGgXhsMh5XKZXq/ndOqzH5VkPrsRnkwmVCoVut0ui8XCzRL3flSMcmRgPp/TarWo1+tMp1tzhil9PyrDfTOdMRgMSKfTjMfjQ4Rtbv99KdbpteOxOEBHSvloH8MbVIv0iqXWVIFER+eahwZqdlxfL0TXqLh0akZaiw0DOqMlUcHxVDyh4vnq7G6UYp1Wr05kwo7lG3eDv3qBzu2XHPd1jFBx/O7twNZmpF3GgCqHnY6lXiO27VYE//PldIuRk1zPXwFSssUF2TmRaQAAAABJRU5ErkJggg=="/>
+                  </svg>
+
+                  </span></a>
+            </div>
+            <div class="works__item">
+                <div class="works__item-img"><img src="./img/image-works-5@2x.jpg" alt=""></div>
+                <div class="works__item-title">沼沢の家</div>
+                <a class="works__item-link">詳しく見る<span class="works__item-btn"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                    <image id="arrow-b-icon.svg" width="16" height="16" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACL0lEQVRYhc2XsWtaQRzHPz50kbQOneoWcCuV4DmUbE5ZhYpL3TvoHPQvCKi7irOCoODaKVvJclLELiIEp0xBiJkMaoa7ZzVVvPfU1342Oe++33fv3e/3PR+GCCE+AEkgAUSBc+BMDz8D90AfuAW6UspHk3V9BsJRoAB8BQKGfl+ADnAjpey7MiCEeAcUge8mRnewBGrAtZRyamxACPEJ6AIRl8JvGQFJKeXvvQaEEF+AH8D7I4nbPAFXUsq7nQb0k/88gfi6icv1nVgZ0O+8x/G2fRcjIGZ/E9baQNEDcbRG0f7hg9VR+4X7r90pS+BCStm3d6DgoThaqwDg0xXuAfMicyxegI8Wqrx6LY7WTPpRtd2YTCZDIBCg0Wgwm80ONZGwUI3FmGAwSDabpd1uk0g48r6NqIXqao4Jh8OUSiWq1SqRiOvTe27xp6W6Ih6P02w2yefzhEIhp9PPrP3/2Y9lWaRSKXK5nOO5flSYOGgXhsMh5XKZXq/ndOqzH5VkPrsRnkwmVCoVut0ui8XCzRL3flSMcmRgPp/TarWo1+tMp1tzhil9PyrDfTOdMRgMSKfTjMfjQ4Rtbv99KdbpteOxOEBHSvloH8MbVIv0iqXWVIFER+eahwZqdlxfL0TXqLh0akZaiw0DOqMlUcHxVDyh4vnq7G6UYp1Wr05kwo7lG3eDv3qBzu2XHPd1jFBx/O7twNZmpF3GgCqHnY6lXiO27VYE//PldIuRk1zPXwFSssUF2TmRaQAAAABJRU5ErkJggg=="/>
+                  </svg>
+
+                  </span></a>
+            </div>
+            <div class="works__item">
+                <div class="works__item-img"><img src="./img/image-works-6@2x.jpg" alt=""></div>
+                <div class="works__item-title">青田の家</div>
+                <a class="works__item-link">詳しく見る<span class="works__item-btn"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                    <image id="arrow-b-icon.svg" width="16" height="16" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACL0lEQVRYhc2XsWtaQRzHPz50kbQOneoWcCuV4DmUbE5ZhYpL3TvoHPQvCKi7irOCoODaKVvJclLELiIEp0xBiJkMaoa7ZzVVvPfU1342Oe++33fv3e/3PR+GCCE+AEkgAUSBc+BMDz8D90AfuAW6UspHk3V9BsJRoAB8BQKGfl+ADnAjpey7MiCEeAcUge8mRnewBGrAtZRyamxACPEJ6AIRl8JvGQFJKeXvvQaEEF+AH8D7I4nbPAFXUsq7nQb0k/88gfi6icv1nVgZ0O+8x/G2fRcjIGZ/E9baQNEDcbRG0f7hg9VR+4X7r90pS+BCStm3d6DgoThaqwDg0xXuAfMicyxegI8Wqrx6LY7WTPpRtd2YTCZDIBCg0Wgwm80ONZGwUI3FmGAwSDabpd1uk0g48r6NqIXqao4Jh8OUSiWq1SqRiOvTe27xp6W6Ih6P02w2yefzhEIhp9PPrP3/2Y9lWaRSKXK5nOO5flSYOGgXhsMh5XKZXq/ndOqzH5VkPrsRnkwmVCoVut0ui8XCzRL3flSMcmRgPp/TarWo1+tMp1tzhil9PyrDfTOdMRgMSKfTjMfjQ4Rtbv99KdbpteOxOEBHSvloH8MbVIv0iqXWVIFER+eahwZqdlxfL0TXqLh0akZaiw0DOqMlUcHxVDyh4vnq7G6UYp1Wr05kwo7lG3eDv3qBzu2XHPd1jFBx/O7twNZmpF3GgCqHnY6lXiO27VYE//PldIuRk1zPXwFSssUF2TmRaQAAAABJRU5ErkJggg=="/>
+                  </svg>
+
+                  </span></a>
+            </div>
+        </div>
+        <a href="#" class="button button__normal">一覧を見る</a>
+
+    </div>
+</section>
+<section class="news inner">
+    <div class="news__container">
+        <div class="section__title">お知らせ<span class="section__en">News</span></div>
+    </div>
+    <div class="news__items">
+        <a href="#" class="news__item">
+            <div class="news__date">2021.07.05<span class="news__item-news">News</span></div>
+            <div class="news__title">夏季休業のお知らせ。</div>
+        </a>
+        <a href="#" class="news__item">
+            <div class="news__date">2021.06.30<span>Event</span></div>
+            <div class="news__title">オンライン見学会開催決定しました。</div>
+        </a>
+        <a href="#" class="news__item">
+            <div class="news__date">2021.06.25<span>Event</span></div>
+            <div class="news__title">3棟同時現場内覧会開催いたします。 ｜山形市・天童市・東根市</div>
+        </a>
+    </div>
+    <a href="#" class="button button__normal">一覧を見る</a>
+
+</section>
+<section class="contact">
+    <div class="contact__container inner">
+        <div class="section__title">お問い合わせ<span class="section__en">Contact</span></div>
+        <div class="contact__items">
+            <div class="contact__item">
+                <div class="contact__item-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="32" viewBox="0 0 27 32">
+                        <image id="doc-icon.svg" width="27" height="32" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADUAAAA/CAYAAABAfYAWAAADUElEQVRoge2aTUhUURTHf07Zh2FlhNWjTfRNZMWxMgipVUUktIkWLV3bIqIIJMqNtZKWQbuWQVFUqygsQcNTUJCLyAKHBoQYXTQZLmzx7pNxdPTeN2+Y96b5wXDnzuOce/7cr/P01FECIlIHXAC6gMNAfSn+8pgBRoBHQJ+qZl2M68KOKiLrgYfA2bA+LBkHOlR1yNYglCgR2Qq8AnYBU8Aq86gpjL8FaATagFvAXiAL7FPVjI3xctfRjKA3wHYgDXQAHwBUdcLVXxEmgDEReQG8BQ4B14HLNsYpl5EKBH0DjqnqRxcfLqjqb6DbdM/Z2lmLWkDQCVVNO8QYlmHTbrM1sBJVQUEAf10NlhRVYUGhWFRUEgXBIqKSKgiKHOlxFiQin4D9BT/ngCHghqoOzpupOAtahAbgJNAvIsfniBKRZmIuSFVb8DOX/M9O4DF+7tk7u/xEZCXwHF/QKDEUFLBA5jIhIl3AeeBI/p7qBlqBX8DpUgUVWfvF+AwcUNWZsOOpalpEAOpTJoAtwBXzvFNVv9o6M3sQYDpsQFETzFQnfqbdr6pPbI1FZAdw13Tf5z9T1RbzemLDZCmzVEgg6pRp20UkjPNp/Cx6DhFm7U4Ep5/t2i8kB7wG2lX1XTQhlU4wU2tNu8H11TmOpMxRHuCcEceRFLA66KhqroKxRIbTm29SsPobheNFGoaSL998/t+ZcrxIw1CWy3dJKnWRhqEql19NVFKoiUoKVSmqllEkhVpGEdWg5aYql19NVFKoiUoKtcs3KdQu36gGLTdVufyqVtRk0BGRTRWMpRiNprXecymzQX+YfmvUEUVAm2lHbA2C5ffMtD0i0hBpSCUgImvwa/7Ar9K0Ijj97gCX8OvqhkXkJjCoqmORRmmBKWFtxl81PfhFjONAn62P2cpMETkKPDUO40QWOGNTbhr8a3f29DNGe4DbwBccNmaZ+A7cwy8zta6fhRIKg+PIvJmqJpwKg022DhFm1OXAtdo5eP1Yh1+RHEuqZvmJyGbzdbpqRAHtph1d5mLled5VYAXQ6Hle1vO8P57nTWUyVoX9ZUNEdgP3gY3AA6cjXUSuAb3lCCwi0sBBp5nKZDIDnucN4M9WE34GHYe7Lge8BC6q6s9/q2Uq5gvCcaUAAAAASUVORK5CYII="/>
+                      </svg>
+
+                </div>
+                <div class="contact__item-text">資料請求</div>
+                <div class="contact-btn contact__item-btn--accent">資料請求する</div>
+            </div>
+            <div class="contact__item">
+                <div class="contact__item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="25" viewBox="0 0 32 25">
+                    <image id="mail-icon.svg" width="32" height="25" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD4AAAAwCAYAAABJy8k0AAAETklEQVRoge2abWjVVRzHP/dOMwMLKbR6IVkvsqIgvrE5chWCqEmsB1dBj7YilYSFlFmCL2xQ0iNi2V44WkEpzFJ7VKwJmUz8SvWmKMKoQMRQLKnQ5npxzoXLmm679/9g2z5wuf9zzu+cfb/3buf/O7/9C0QkFYB7gcXANcA5/P85CXwPfAS8ZvvH0kABQNJZwDvA7bnIy4bjwCqg1XbvmNj5IsH038DTwLvAX/noS5RxwHXAw8CtBOMTgGUFSdcC+2Jgo+0t+WhMF0kLgPWxWVcEWmJj43A1DWC7HXgrNpcUgVtiozMfSZnyaXyfWQQmxkabpFk5CUodSY1AW2xeXCwbOw/4WNLC7GWli6QngE2U3aLLjb8P1ACvS3pZUk3G+hJH0lhJbcBqgtd1pbFy4w8BK+J1C7BZ0oTMVCaMpInAJ8AjhESmxfai0ni58V7brcBdhHv4POALSVMy1JsIki4DdgMzgWOE2/Sr5THFvpNsbwRuAg4SUtc9kmpTV5sQkhqAbuBy4Bdghu0P+sb9xziA7T1ALfANMBnoknRnenKTQdJ9wA7gfGAvUGf76/5i+zUOYPtnYAbwITAe2CDpmXiYOaOQVJDUCnQAYwk5yY22D5xqzimNA9j+A2gEXoldzwId8VBzRiBpPLCBcMYAeA5osv3n6ead1jiA7R7bjwOLgB7C0fUzSRdUJ7l6JF0IdAFNwAngQdvLbfcONHdA4yVsrwPmAkeB6wmb3hUVKU4ASVcTNrFa4DAwy/abg50/aOMAtrcD9cB+YCqwO480V9LNwC5gCqHQMN32zqGsMSTjALa/JXzKu8ghzZX0GLCVcK7uAupt/zDUdYZsHMD2b4Tk4G0ySnMl1UhaC6wh6F4PzLZ9uJL1KjIOYPs4cD8ZpLmSziXcVhcDvcBTtpujhoqo2DiA7dTTXEmXAF8Cs+PPuMP289WuW5XxEmmluZKmE3buq4ADQIPt96pdFxIyDsmnuZLuBj4HJgFfAbW2nYRWSNA4JJPmxvRzBaHcfTZhB2+w/WuSWhM1DtWluZLGEQqCq2LXS8Btto8lrTNx41BZmhvHdgD3AP8AC20vtd2ThsZUjJfoJ83tljStb1zs644xR4G5tt9IU9uYgUOqw/Z2SfWEv/tLgX2SVgPtMWQB8CRhT9gPzIvZYaqk+o2XiEbqgG0EgyuBn+JrZezbRigcpG4aMjIOYPsQMAeYD+wkHCNPxOv5wJwYkwmp/6qXE8/JnfGFpMJgzs5pkNk33h95mYacjefJqPGRxqjxkcao8ZHGqHFGwIcgaXK8PFkESpWN3P4rkiE3xPfvioSiPITj4bAl1vyXxeamIrA2NpolPZCPrHSJZa8OQMARYE3pWdYXgKUxrpNQJNhr+2AeQpNA0iTgIkJVZwkwjfAsTJPtTSXjBUKBbznDd5M7BDTb3grx6eUSkq4EHiXUyaaS8Xk9BY4QavKbgXbbv5cG/gW3ZoKlOr06IAAAAABJRU5ErkJggg=="/>
+                  </svg>
+                  </div>
+                <div class="contact__item-text">メールでの<br class="is-sp">お問い合わせ</div>
+                <div class="contact-btn">問い合わせる</div>
+            </div>
+            <div class="contact__item">
+                <div class="contact__item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="30" viewBox="0 0 22 30">
+                    <image id="tel-icon.svg" width="22" height="30" xlink:href="data:img/png;base64,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"/>
+                  </svg>
+                  </div>
+                <div class="contact__item-text">お電話での<br class="is-sp">お問い合わせ</div>
+                    <div class="contact-btn contact__item-btn--tel is-sp">電話する</div>
+                    <div class="pc__tel is-pc">0120-123-456</div>
+                    <div class="pc__hours is-pc">営業時間9:00〜18:00 (水曜定休)</div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="footer__wrapper inner">
+        <div class="footer__up">
+            <div class="footer__logo"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="82" height="90" viewBox="0 0 82 90">
+                <image id="logo-footer.svg" width="82" height="90" xlink:href="data:img/png;base64,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"/>
+            </svg>
+            </div>
+            <div class="footer__company">株式会社酒田工務店</div>
+            <div class="footer__address">〒123-4567 <span>山形県山形市山形1-1</span></div>
+            <div class="footer__tel">0120-123-456</div>
+            <div class="footer__mail">example@mail.com</div>
+         </div>
+    <nav class="footer__nav">
+        <ul class="footer__nav-container">
+            <li class="footer__nav-item"><a href="">コンセプト</a></li>
+            <li class="footer__nav-item"><a href="">施工実績</a></li>
+            <li class="footer__nav-item"><a href="">お知らせ</a></li>
+            <li class="footer__nav-item"><a href="">会社概要</a></li>
+            <li class="footer__nav-item"><a href="">よくある質問</a></li>
+        </ul>
+    </nav>
+</div>
+</footer>
+<div class="footer__copy">
+    <div class="footer__copy-container inner">
+        <div class="copy__container-left">
+            <div class="copy__container-left--1">サイトマップ</div>
+            <div class="copy__container-left--2">プライバシーポリシー</div>
+        </div>
+        <div class="copy__container-right">© SAKATAKOMUTEN inc.</div>
+    </div>
+</div>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="./js/index.js"></script>
+</body>
+</html>
