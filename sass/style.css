@@ -491,8 +491,8 @@ button {
 @media screen and (min-width: 768px) {
   .contact__item {
     flex-direction: column;
-    padding: 0 55px;
     position: relative;
+    width: 33.3333333333%;
   }
 }
 
@@ -531,9 +531,11 @@ button {
 @media screen and (min-width: 768px) {
   .contact__items {
     display: flex;
-    max-width: 846px;
+    max-width: 900px;
+    width: 100%;
     margin: 0 auto;
     align-items: baseline;
+    justify-content: center;
   }
 }
 
