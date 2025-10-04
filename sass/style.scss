@@ -10,9 +10,6 @@ $font-color-dark:#333;
 
 $layout-width-inner:1040px;
 
-$header-height:80px;
-$header-height-sp:64px;
-
 body{
     font-family: $font-ja;
 }
@@ -34,6 +31,7 @@ section{
     font-size: 32px;
     text-align: center;
 }
+
 .section__en{
     font-size: 16px;
     color: $main-color;
@@ -66,123 +64,219 @@ section{
     }
 }
 
-///header///
-.header{
-    position: fixed;
-    width: 100%;
-    height: $header-height;
-    z-index: 20;
-    background: rgba( #fff, 0.8);
+// ================================
+//  初期設定 CSS
+// ================================
+main {
+  height: 300vh;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+}  
 
+// buttonはブラウザによって初期設定されているものが多いので初期化をしておきます。
+button {
+  color: #000;
+  background: transparent;
+}
+//ヘッダー ========================
+.header {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background: rgba( #fff, 0.8);
+}
+.header__inner {
+  padding: 18px;
+  display: flex;
+  gap: 30px;
+  max-width: $layout-width-inner;
+  margin: 0 auto;
+  align-items: center;
 }
 .header__logo{
-   width: 140px;
+    width: 115px;
+
 }
-.header__contact{
-    width: 168px;
-    margin-left: auto;
-    a{
-        display: block;
-        font-size: 16px;
-        color: #fff;
-        background: $main-color;
-        height: $header-height;
-        text-align: center;
-        padding-top: 24px;
-        line-height: 1;
+.header__nav {
+    display: flex;
+  //spの場合非表示
+  @include breakpoints.mq(sp){
+        display: none;
     }
+}
+.header__btn{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-left: 32px;
+    padding-right: 32px;
     span{
-        font-family: $font-en;
-        font-size: 12px;
         color: $accent-color;
-        display: block;
-        line-height: 1;
-        margin-top: 7px;
+        font-size: 12px;
     }
-    @include breakpoints.mq(sp){
+    &::after {
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 36px;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      background-color: #000;
+    }
+}
+.header__list {
+  display: flex;
+
+  li {
+    position: relative; // 線の基準位置にする
+
+    // 全てのliに左線を設定
+    &::before {
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 36px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      background-color: #000;
+    }
+
+    // "最後のli"にだけ右線を設定
+    &:last-child::after {
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 36px;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      background-color: #000;
+    }
+  }
+
+  a {
+    display: flex;
+    flex-direction: column;
+    padding-left: 32px;
+    padding-right: 32px;
+    text-align: center;
+
+    span {
+      color: $accent-color;
+      font-size: 12px;
+    }
+  }
+}
+
+
+
+
+
+//アイコン ====================
+.drawer__icon {
+  position: fixed;
+  z-index: 102;
+  top: 24px;
+  right: 18px;
+  width: 24px;
+  height: 16px;
+  display: flex;
+  border: none;
+  flex-direction: column;
+  justify-content: space-between;
+  @include breakpoints.mq(pc){
         display: none;
-
     }
 }
-.header__container{
-    display: flex;
-    position: relative;
-}
-.header__menu-button{
-       border: none;
-        position: absolute;
-        top: 22px;
-        right: 20px;
-        width: 24px;
-        height: 20px;
-        overflow: hidden;
-        color: transparent;
-        background: url(../img/menu-icon@2x.png) center center no-repeat;
-        background-size: 100% auto;
-        @include breakpoints.mq(pc){
-            display: none;
-
-        }
-        &.is-checked{
-            background:url(../img/bg_menu-close.png) center center no-repeat;
-            background-size: 100% auto;
-
-        }
-
-}
-.header__nav{
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-    margin-left: 32px;
+.drawer__icon--bar {
+  width: 100%;
+  height: 1px;
+  background: black;
 }
 
-.header__nav-list{
-    display: flex;
-
-}
-.header__nav-item{
-    position: relative;
-    white-space: nowrap;
-    &::before{
-        content: "";
-        height: 36px;
-        width: 1px;
-        background: $font-color-dark;
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
+//メニューが開いている時 ========
+.drawer__icon.js-show {
+    .drawer__icon--bar {
+        background: $font-color;
     }
-    a{
-        display: block;
-        padding: 0 30px;
-        font-size: 16px;
-        line-height: 1;
-        text-align: center;
-    }
-}
-.button__text{
-    line-height: 1;
-    font-family: $font-en;
-    color: $accent-color;
-    margin-top: 8px;
-    display: block;
-    font-size: 12px;
-}
-.header__contents{
-}
-.header__nav{
-    @include breakpoints.mq(sp){
-        display: none;
-
-    }
+  .drawer__icon--bar:nth-of-type(1) {
+    rotate: 45deg;
+    translate: 0 7.5px;
+  }
+  .drawer__icon--bar:nth-of-type(2) {
+    display: none;
+  }
+  .drawer__icon--bar:nth-of-type(3) {
+    rotate: -45deg;
+    translate: 0 -7.5px;
+  }
 }
 
-//header-sp//
-.header__nav-sp{
-    margin-top: 80px;
+//ドロワーメニュー
+.drawer {
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  background: $main-color;
+  overflow-y: scroll;
 }
+.drawer__body {
+  width: 100%;
+  height: fit-content;
+  padding-block: 88px 40px;
+  text-align: center;
+}
+.drawer__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  margin-bottom: 40px;
+  li a {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+.drawer__btn {
+  display: inline-block;
+  border-radius: 100vmax;
+  color: $font-color;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.drawer__icon--bar {
+  transition: all 0.5s ease;
+}
+
+//ドロワーの出現の動きを指定
+.drawer {
+  translate: 101%;
+  transition: translate 0.5s ease;
+
+  &.js-show {
+    translate: 0;
+  }
+}
+
 
 //fv//
 .fv{
