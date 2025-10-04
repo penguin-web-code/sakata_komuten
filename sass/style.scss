@@ -489,6 +489,7 @@ button {
 .contact__item{
     padding: 30px 12px;
     display: flex;
+    align-items: center;
     @include breakpoints.mq(pc){
         display: block;
         padding: 0 55px;
@@ -531,6 +532,7 @@ button {
         display: flex;
         max-width: 846px;
         margin: 0 auto;
+        align-items: baseline;
     }
 }
 .contact__item-icon{
@@ -548,10 +550,12 @@ button {
     font-size: 16px;
     line-height: 1.5;
     text-align: center;
-    margin-bottom: 23px;
     @include breakpoints.mq(sp){
         display: flex;
         align-items: center;
+    }
+    @include breakpoints.mq(pc){
+        margin-bottom: 24px;
     }
 }
 .contact-btn{
@@ -562,10 +566,12 @@ button {
     background:$main-color;
     text-align: center;
     padding-top: 10px;
-    margin: 23px auto 0;
     @include breakpoints.mq(sp){
         margin-left: auto;
 
+    }
+    @include breakpoints.mq(pc){
+        margin: 23px auto 0;
     }
 }
 .contact__item-btn--accent{

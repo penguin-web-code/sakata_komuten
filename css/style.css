@@ -484,6 +484,7 @@ button {
 .contact__item {
   padding: 30px 12px;
   display: flex;
+  align-items: center;
 }
 @media screen and (min-width: 768px) {
   .contact__item {
@@ -530,6 +531,7 @@ button {
     display: flex;
     max-width: 846px;
     margin: 0 auto;
+    align-items: baseline;
   }
 }
 
@@ -551,12 +553,16 @@ button {
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
-  margin-bottom: 23px;
 }
 @media screen and (max-width: 767px) {
   .contact__item-text {
     display: flex;
     align-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact__item-text {
+    margin-bottom: 24px;
   }
 }
 
@@ -568,11 +574,15 @@ button {
   background: #31452d;
   text-align: center;
   padding-top: 10px;
-  margin: 23px auto 0;
 }
 @media screen and (max-width: 767px) {
   .contact-btn {
     margin-left: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact-btn {
+    margin: 23px auto 0;
   }
 }
 
