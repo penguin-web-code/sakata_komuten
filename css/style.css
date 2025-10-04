@@ -105,7 +105,7 @@ button {
 .header__nav {
   display: flex;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1079px) {
   .header__nav {
     display: none;
   }
@@ -184,7 +184,7 @@ button {
   flex-direction: column;
   justify-content: space-between;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1080px) {
   .drawer__icon {
     display: none;
   }
@@ -676,6 +676,13 @@ button {
     display: flex;
     margin: 56px auto 122px;
     max-width: 700px;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__nav-item a {
+    padding: 0 32px;
   }
 }
 

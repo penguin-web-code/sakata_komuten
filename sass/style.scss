@@ -111,9 +111,10 @@ button {
 .header__nav {
     display: flex;
   //spの場合非表示
-  @include breakpoints.mq(sp){
-        display: none;
-    }
+  @media screen and (max-width: 1079px) {
+  display: none;
+}
+
 }
 .header__btn{
     text-align: center;
@@ -198,9 +199,9 @@ button {
   border: none;
   flex-direction: column;
   justify-content: space-between;
-  @include breakpoints.mq(pc){
-        display: none;
-    }
+ @media screen and (min-width: 1080px) {
+  display: none;
+}
 }
 .drawer__icon--bar {
   width: 100%;
@@ -666,7 +667,15 @@ button {
        display: flex;
        margin: 56px auto 122px;
        max-width: 700px;
+       justify-content: center;
 
+    }
+}
+.footer__nav-item{
+    a{
+        @include breakpoints.mq(pc){
+        padding: 0 32px;
+    }
     }
 }
 
