@@ -260,27 +260,6 @@ button {
   translate: 0;
 }
 
-.fv {
-  width: 100%;
-  height: 900px;
-  background: transparent url(../img/top-image@2x.jpg) no-repeat center center/cover;
-}
-
-.fv__container {
-  height: inherit;
-  position: relative;
-}
-
-.fv__text {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-}
-.fv__text img {
-  width: 960px;
-}
-
 @media screen and (min-width: 768px) {
   .concept {
     margin-bottom: 600px;
