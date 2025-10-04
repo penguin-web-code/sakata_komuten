@@ -623,7 +623,11 @@ button {
     gap: 16px;
 }
 .footer__nav-item{
-    padding: 24px 0;
+    a{
+        padding: 24px 0;
+        width: 100%;
+
+    }
     position: relative;
     @include breakpoints.mq(sp){
         &:not(:first-child){
@@ -640,7 +644,6 @@ button {
 
     }
     @include breakpoints.mq(pc){
-        padding: 0 32px;
         &:not(:first-child){
             &::before{
             position: absolute;
