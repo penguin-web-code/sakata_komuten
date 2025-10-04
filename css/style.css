@@ -377,8 +377,15 @@ button {
   height: 111px;
   background: #333;
 }
-.works__item-link span {
-  margin-left: 8px;
+.works__item-link::after {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: transparent url(/img/arrow-b-icon@2x.svg) no-repeat center/contain;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -20px;
 }
 
 .button {

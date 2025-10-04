@@ -385,10 +385,16 @@ button {
         width: 1px;
         height: 111px;
         background: $font-color-dark;
-
     }
-    span{
-        margin-left: 8px;
+    &::after{
+        position: absolute;
+        content: "";
+        width: 16px;
+        height: 16px;
+        background: transparent url(/img/arrow-b-icon@2x.svg)no-repeat center/contain;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -20px;
     }
 }
 .button{
