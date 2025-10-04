@@ -8,14 +8,14 @@ html {
 }
 
 .inner {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 5.3333333333vw;
+  padding-right: 5.3333333333vw;
   margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
   .inner {
-    width: 1040px;
-    max-width: 100%;
+    max-width: 1040px;
+    width: 100%;
   }
 }
 
