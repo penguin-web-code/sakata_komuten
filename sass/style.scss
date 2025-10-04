@@ -13,6 +13,9 @@ $layout-width-inner:1040px;
 body{
     font-family: $font-ja;
 }
+html{
+    scroll-behavior: smooth;
+}
 .inner{
     padding-left: 20px;
     padding-right: 20px;
