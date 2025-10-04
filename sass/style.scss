@@ -570,7 +570,7 @@ button {
 
     }
     @include breakpoints.mq(pc){
-        margin: 23px auto 0;
+        margin: 0 auto;
     }
 }
 .contact__item-btn--accent{
@@ -705,6 +705,7 @@ button {
     gap: 33px;
     @include breakpoints.mq(sp){
         margin-bottom: 40px;
+        justify-content: center;
     }
 }
 .copy__container-right{
