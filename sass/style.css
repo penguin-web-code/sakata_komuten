@@ -486,7 +486,7 @@ button {
 }
 @media screen and (min-width: 768px) {
   .contact__item {
-    display: block;
+    flex-direction: column;
     padding: 0 55px;
     position: relative;
   }

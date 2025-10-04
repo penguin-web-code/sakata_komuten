@@ -491,7 +491,7 @@ button {
     display: flex;
     align-items: center;
     @include breakpoints.mq(pc){
-        display: block;
+        flex-direction: column;
         padding: 0 55px;
         position: relative;
 
