@@ -351,6 +351,7 @@ button {
   .works__wrapper {
     grid-template-columns: repeat(3, 1fr);
     gap: 40px 152px;
+    margin-bottom: 130px;
   }
 }
 

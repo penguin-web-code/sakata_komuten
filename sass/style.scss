@@ -364,6 +364,7 @@ button {
     @include breakpoints.mq(pc){
         grid-template-columns: repeat(3,1fr);
         gap: 40px 152px;
+        margin-bottom: 130px;
 
 }
 }
