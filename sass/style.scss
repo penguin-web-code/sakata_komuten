@@ -671,17 +671,16 @@ button {
 .footer__nav-container{
     @include breakpoints.mq(pc){
        display: flex;
-       margin: 56px auto 122px;
+       margin: 56px auto;
        max-width: 700px;
+       width: 100%;
        justify-content: center;
 
     }
 }
 .footer__nav-item{
-    a{
         @include breakpoints.mq(pc){
-        padding: 0 32px;
-    }
+        width: calc(100% / 5);
     }
 }
 
